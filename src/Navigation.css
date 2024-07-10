@@ -1,0 +1,48 @@
+/* Navigation.css */
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center align items vertically */
+}
+
+.nav-left, .nav-center, .nav-right {
+  display: flex;
+  align-items: center; /* Center align items vertically */
+}
+
+.nav-center {
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.site-title, .nav-link {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  margin: 0 10px; /* Adjust margin as needed */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.site-title:hover, .nav-link:hover {
+  color: rgb(156, 156, 156);
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+  .nav-link {
+    font-size: 16px; /* Optional: Adjust font size for smaller screens */
+  }
+  .site-title {
+    font-size: 16px; /* Optional: Adjust font size for smaller screens */
+  }
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 375px) {
+  .nav-link {
+    font-size: 14px; /* Optional: Adjust font size for smaller screens */
+  }
+  .site-title {
+    font-size: 14px; /* Optional: Adjust font size for smaller screens */
+  }
+}

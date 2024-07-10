@@ -1,0 +1,46 @@
+/* Homepage.css */
+
+.navigation {
+    margin: 0 auto;
+    padding: 20px 20px; /* Adjust this value as needed */
+    max-width: 1440px; /* You can adjust the max-width as per your design */
+}
+
+
+.container {
+    margin: 0 auto;
+    padding: 0 30px; /* Adjust this value as needed */
+    max-width: 1440px; /* You can adjust the max-width as per your design */
+  }
+  
+  .section-title {
+    color: white;
+    text-align: left;
+    margin-top: 60px;
+    margin-bottom: 00px;  /* Adjust this value to reduce space */
+  }
+  
+  .projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distributes the project cards evenly */
+    margin-bottom: 50px;  /* Adjust this value to reduce space */
+    margin-top: 20px;
+  }
+  
+  .project-card {
+    width: 48.5%; /* Adjust this to 100% for smaller screens */
+    box-sizing: border-box;
+    margin-bottom: 40px;  /* Adjust this value to reduce space */
+  }
+  
+  @media (max-width: 768px) {  
+    .project-card {
+        width: 100%; /* Adjust this to 100% for smaller screens */
+        box-sizing: border-box;
+      }
+    .projects-grid {
+      flex-direction: column; /* Stack project cards vertically */
+    }
+  }
+  
