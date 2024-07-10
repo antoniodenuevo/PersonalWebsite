@@ -107,7 +107,8 @@ The choice of film as the medium is supported by its effectiveness in eliciting 
 Videos were sourced from personal archives and Spanish TV footage from the 1990s, chosen for their emotional resonance and cultural nuances. The chosen content ranged from urban floods and images of religious celebrations to family albums evoking nostalgia. The music has been created by mixing found royalty-free sounds with my own sounds, which I've then turned into soundscapes. The voice heard as narration also comes from various sources of Spanish TV.`,
       videoUrl: "https://player.vimeo.com/video/981796039?autoplay=1&muted=1",
       media: [
-      ]
+      ],
+      externalLink: "https://antoniodenuevo.github.io/Generative-film/"
     }
   };
 
@@ -151,6 +152,16 @@ Videos were sourced from personal archives and Spanish TV footage from the 1990s
               </div>
             ))}
           </div>
+          {project.externalLink && (
+            <a
+              href={project.externalLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="external-link-button"
+            >
+              <p>Visit Project Page</p>
+            </a>
+          )}
         </div>
         <div className="right-section">
           <h2 className="project-title">{project.title}</h2>
