@@ -159,7 +159,7 @@ Videos were sourced from personal archives and Spanish TV footage from the 1990s
               rel="noopener noreferrer"
               className="external-link-button"
             >
-              <p>Visit Project Page</p>
+              <p>Watch Echoes Of Sadness</p>
             </a>
           )}
         </div>
