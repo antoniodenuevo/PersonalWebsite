@@ -1,25 +1,29 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
 import Homepage from './Homepage';
 import ProjectDetail from './ProjectDetail';
 import Info from './Info';
 import Navigation from './Navigation';
 import './App.css';
 
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
+function RedirectHandler() {
+  const navigate = useNavigate();
 
-  React.useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const redirectPath = params.get('redirect');
+    if (redirectPath) {
+      navigate('/' + redirectPath);
+    }
+  }, [navigate]);
 
   return null;
-};
+}
 
-const App = () => {
+function App() {
   return (
-    <Router>
-      <ScrollToTop />
+    <Router basename="/PersonalWebsite">
+      <RedirectHandler />
       <Navigation />
       <Routes>
         <Route path="/" element={<Homepage />} />
@@ -28,6 +32,6 @@ const App = () => {
       </Routes>
     </Router>
   );
-};
+}
 
 export default App;
