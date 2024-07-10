@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; url=/PersonalWebsite/">
+    <script>
+      (function() {
+        var currentLocation = window.location;
+        var pathname = currentLocation.pathname.replace(/\/PersonalWebsite\/404.html/, '');
+        var target = currentLocation.protocol + '//' + currentLocation.host + '/PersonalWebsite' + pathname + (currentLocation.search || '') + (currentLocation.hash || '');
+        if (target !== currentLocation.href) {
+          window.history.replaceState(null, null, target);
+          window.location.replace(target);
+        }
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
