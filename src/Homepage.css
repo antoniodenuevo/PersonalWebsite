@@ -1,12 +1,5 @@
 /* Homepage.css */
 
-.navigation {
-    margin: 0 auto;
-    padding: 20px 20px; /* Adjust this value as needed */
-    max-width: 1440px; /* You can adjust the max-width as per your design */
-}
-
-
 .container {
     margin: 0 auto;
     padding: 0 30px; /* Adjust this value as needed */
@@ -14,7 +7,7 @@
   }
   
   .section-title {
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: left;
     margin-top: 60px;
     margin-bottom: 00px;  /* Adjust this value to reduce space */
@@ -41,6 +34,11 @@
       }
     .projects-grid {
       flex-direction: column; /* Stack project cards vertically */
+    }
+
+    .container {
+      margin: 0 auto;
+      padding: 0 20px; /* Adjust this value as needed */
     }
   }
   

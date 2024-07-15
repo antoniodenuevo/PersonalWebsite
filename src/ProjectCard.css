@@ -7,7 +7,6 @@
 .project-image-wrapper {
   position: relative;
   width: 100%;
-  border-radius: 15px; 
   padding-top: 56.25%; /* 16:9 aspect ratio */
   overflow: hidden;
 }
@@ -26,24 +25,24 @@
 }
 
 .project-card:hover .project-image {
-  filter: brightness(1.4); /* Brighten the image on hover */
+  filter: brightness(0.8); /* Brighten the image on hover */
 }
 
 .project-info {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .project-info h3 {
   margin: 0;
-  color: white; /* Always white */
+  color: rgb(0, 0, 0); /* Always white */
 }
 
 .project-info p {
-  margin-top: 4px;
+  margin-top: 0px;
   color: rgb(156, 156, 156);
   transition: color 0.3s ease-in-out; /* Smooth transition for color */
 }
 
 .project-card:hover .project-info p {
-  color: white; /* Change to white on hover */
+  color: rgb(0, 0, 0); /* Change to white on hover */
 }

@@ -1,21 +1,21 @@
+// Navigation.js
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; // Use Link for client-side navigation
 import './Navigation.css';
 
 const Navigation = () => {
   return (
     <nav className="navigation">
       <div className="nav-left">
-        <Link to="/" className="site-title">antonio de nuevo</Link>
+        <Link to="/" className="site-title">Antonio De Nuevo</Link>
       </div>
       <div className="nav-center">
-        <Link to="/" className="nav-link">projects</Link>
-        {/* <Link to="/research" className="nav-link">research</Link> */}
-        <Link to="/info" className="nav-link">info</Link>
+        <Link to="/" className="nav-link">Projects</Link>
+        <Link to="/info" className="nav-link">Info</Link>
       </div>
       <div className="nav-right">
-        <a href="mailto:your-email@example.com" className="nav-link">mail</a>
-        <a href="https://www.instagram.com/yourprofile" className="nav-link">instagram</a>
+        <a href="mailto:antoniomdenuevo@gmail.com" className="nav-link">Mail</a>
+        <a href="https://instagram.com/antoniodenuevo" className="nav-link">Instagram</a>
       </div>
     </nav>
   );

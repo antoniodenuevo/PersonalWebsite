@@ -4,6 +4,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center; /* Center align items vertically */
+  margin: 0 auto;
+  padding: 20px 20px; /* Adjust this value as needed */
+  max-width: 1440px; /* You can adjust the max-width as per your design */
 }
 
 .nav-left, .nav-center, .nav-right {
@@ -18,7 +21,7 @@
 
 .site-title, .nav-link {
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   margin: 0 10px; /* Adjust margin as needed */
   transition: color 0.3s ease; /* Smooth transition for color change */
 }
@@ -30,19 +33,28 @@
 /* Media query for screens smaller than 768px */
 @media (max-width: 768px) {
   .nav-link {
-    font-size: 16px; /* Optional: Adjust font size for smaller screens */
+    font-size: 14px; /* Optional: Adjust font size for smaller screens */
   }
   .site-title {
-    font-size: 16px; /* Optional: Adjust font size for smaller screens */
+    font-size: 14px; /* Optional: Adjust font size for smaller screens */
+  }
+
+  .navigation {
+    padding: 20px 10px; /* Adjust this value as needed */
   }
 }
 
 /* Media query for screens smaller than 768px */
 @media (max-width: 375px) {
+  .navigation {
+    padding: 20px 10px; /* Adjust this value as needed */
+  }
+
   .nav-link {
-    font-size: 14px; /* Optional: Adjust font size for smaller screens */
+    font-size: 12px; /* Optional: Adjust font size for smaller screens */
+
   }
   .site-title {
-    font-size: 14px; /* Optional: Adjust font size for smaller screens */
+    font-size: 12px; /* Optional: Adjust font size for smaller screens */
   }
 }

@@ -17,16 +17,13 @@ import landscapeImage2 from './assets/landscape/landscapedetail2.jpg';
 import landscapeImage3 from './assets/landscape/landscapedetail3.jpg';
 import landscapeImage4 from './assets/landscape/landscapedetail4.jpg';
 
-
-
 const ProjectDetail = () => {
   const { id } = useParams();
 
   const projectData = {
-    1: {
-      title: "haknam: the whole picture",
-      description: "creating a fictional world of visuals for a live performance",
-      technologies: "[touchdesigner, c4d]",
+    haknam: {
+      title: "Haknam: The Whole Picture",
+      technologies: "[Touchdesigner, C4D]",
       details: `I was approached by composer and artist Xavier Bonfill to create a set of interactive visuals that would accompany the live performances of his piece (the.whole.picture).<br><br>
     
     The project is about the fragmentation of memory and how we can’t ever be certain of the things that we remember.<br><br>
@@ -50,10 +47,9 @@ const ProjectDetail = () => {
         { type: 'video', src: video5 }
       ]
     },
-    2: {
-      title: "still life",
-      description: "an interactive installation that blends real-time video, light, and sound",
-      technologies: "[max msp, ableton live, 3 webcams, projector, speakers]",
+    stilllife: {
+      title: "Still Life",
+      technologies: "[Max MSP, Ableton Live, 3 webcams, projector, speakers]",
       details: `Still Life marks the first instalment in a series of interactive audiovisual installations that transform a simple still life setup into a space where digital technology meets traditional artistry.<br><br>
       
       Using video cameras, the installation captures diverse perspectives from a carefully arranged scene. Data from the cameras is processed and translated into a generative musical composition and video projection, creating a dynamic sensory experience. This transformation continuously reshapes the viewer's perception through the interplay of sound, light, and movement.<br><br>
@@ -71,10 +67,9 @@ const ProjectDetail = () => {
         { type: 'image', src: stilllifeImage4 },
       ]
     },
-    3: {
-      title: "landscape",
-      description: "an evolving soundscape generated from visual data of the Thames River's changing light, reflecting the subtle transformation of the landscape.",
-      technologies: "[max msp, ableton live, 3 webcams]",
+    landscape: {
+      title: "Landscape",
+      technologies: "[Max MSP, Ableton Live, 3 webcams]",
       details: `Positioned strategically along the Thames River, three surveillance cameras capture the changing light over an industrial area as the sun sets.<br><br>
 
 This visual data is converted into a dynamic soundscape that evolves with the shifting light—from bright and rapid sounds in daylight to deep, low tones as darkness falls.<br><br>
@@ -88,9 +83,8 @@ Mirroring the river's subtle, persistent flow, the soundscape of "Landscape #1" 
         { type: 'image', src: landscapeImage4 },
       ]
     },
-    4: {
-      title: "echoes of sadness: a generative film odyssey",
-      description: "using computational methods and film to explore the categorization of human emotions",
+    echoesofsadness: {
+      title: "Echoes Of Sadness: A Generative Film Odyssey",
       technologies: "[p5js, personal video archive, projector, speaker]",
       details: `How can computational methods and film navigate and represent the dichotomy between discrete categorisation and the continuous spectrum of human emotions?<br><br>
 
@@ -121,7 +115,23 @@ Videos were sourced from personal archives and Spanish TV footage from the 1990s
   return (
     <div>
       <div className="project-detail-container">
-        <div className="left-section">
+        <div className="project-details"> {/* Changed from left-section to project-details */}
+          <h2 className="project-title">{project.title}</h2>
+          <p className="technologies-used">{project.technologies}</p>
+          <p className="project-description-text" dangerouslySetInnerHTML={{ __html: project.details }}></p>
+          {project.externalLink && (
+            <a
+              href={project.externalLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="external-link-button"
+            >
+              <p>watch echoes of sadness</p>
+            </a>
+          )}
+        </div>
+
+        <div className="project-media"> {/* Changed from right-section to project-media */}
           {project.videoUrl && (
             <div className="video-embed-wrapper">
               <iframe
@@ -144,7 +154,6 @@ Videos were sourced from personal archives and Spanish TV footage from the 1990s
                   <img src={media.src} alt={`Project ${id} Media ${index + 1}`} />
                 ) : (
                   <video autoPlay muted loop>
-
                     <source src={media.src} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
@@ -152,22 +161,7 @@ Videos were sourced from personal archives and Spanish TV footage from the 1990s
               </div>
             ))}
           </div>
-          {project.externalLink && (
-            <a
-              href={project.externalLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="external-link-button"
-            >
-              <p>watch echoes of sadness</p>
-            </a>
-          )}
-        </div>
-        <div className="right-section">
-          <h2 className="project-title">{project.title}</h2>
-          <p className="project-description">{project.description}</p>
-          <p className="technologies-used">{project.technologies}</p>
-          <p className="project-description-text" dangerouslySetInnerHTML={{ __html: project.details }}></p>
+
         </div>
       </div>
     </div>
