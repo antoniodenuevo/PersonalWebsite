@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <script>
-      (function() {
-        var currentLocation = window.location;
-        var pathname = currentLocation.pathname;
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function() {
+      var currentLocation = window.location;
+      var pathname = currentLocation.pathname;
 
-        if (pathname && pathname !== '/' && pathname !== '/index.html') {
-          var target = currentLocation.protocol + '//' + currentLocation.host + '/index.html?redirect=' + pathname + (currentLocation.search || '') + (currentLocation.hash || '');
+      if (pathname && pathname !== '/' && pathname !== '/index.html') {
+        var target = currentLocation.protocol + '//' + currentLocation.host + '/index.html?redirect=' + pathname + (currentLocation.search || '') + (currentLocation.hash || '');
 
-          if (target !== currentLocation.href) {
-            window.history.replaceState(null, null, target);
-            window.location.replace(target);
-          }
-        } else {
-          window.location.replace('/index.html');
+        if (target !== currentLocation.href) {
+          window.history.replaceState(null, null, target);
+          window.location.replace(target);
         }
-      })();
-    </script>
-  </head>
-  <body></body>
+      } else {
+        window.location.replace('/');
+      }
+    })();
+  </script>
+</head>
+<body></body>
 </html>
