@@ -7,7 +7,7 @@
         var currentLocation = window.location;
         var pathname = currentLocation.pathname.replace('/PersonalWebsite', '');
 
-        if (pathname && pathname !== '/') {
+        if (pathname && pathname !== '/' && pathname !== '/index.html') {
           var target = currentLocation.protocol + '//' + currentLocation.host + '/PersonalWebsite/index.html?redirect=' + pathname + (currentLocation.search || '') + (currentLocation.hash || '');
           
           if (target !== currentLocation.href) {
