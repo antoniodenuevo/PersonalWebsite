@@ -11,7 +11,7 @@ const Navigation = () => {
       </div>
       <div className="nav-center">
         <Link to="/" className="nav-link">Projects</Link>
-        <Link to="/info" className="nav-link">Info</Link>
+        <Link to="/info" className="nav-link">About</Link>
       </div>
       <div className="nav-right">
         <a href="mailto:antoniomdenuevo@gmail.com" className="nav-link">Mail</a>
