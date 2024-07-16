@@ -2,19 +2,20 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=/PersonalWebsite/">
     <script>
       (function() {
         var currentLocation = window.location;
-        var pathname = currentLocation.pathname.replace('/PersonalWebsite/', '');
+        var pathname = currentLocation.pathname.replace('/PersonalWebsite', '');
 
-        if (pathname && pathname !== 'index.html') {
+        if (pathname && pathname !== '/') {
           var target = currentLocation.protocol + '//' + currentLocation.host + '/PersonalWebsite/index.html?redirect=' + pathname + (currentLocation.search || '') + (currentLocation.hash || '');
           
           if (target !== currentLocation.href) {
             window.history.replaceState(null, null, target);
             window.location.replace(target);
           }
+        } else {
+          window.location.replace('/PersonalWebsite/');
         }
       })();
     </script>
