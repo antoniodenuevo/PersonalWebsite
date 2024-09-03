@@ -10,7 +10,7 @@
 }
 
 .info-image-wrapper {
-  width: 25%;
+  width: 40%;
 }
 
 .info-image {
@@ -18,9 +18,9 @@
 }
 
 .info-text {
-  width: 50%;
+  width: 40%;
   color: rgb(0, 0, 0);
-  margin-left: 12.5%;
+  margin-left: 5%;
 }
 
 .info-text h2 {

@@ -39,7 +39,7 @@
 
 .project-info p {
   margin-top: 0px;
-  color: rgb(156, 156, 156);
+  color: rgb(0, 0, 0);
   transition: color 0.3s ease-in-out; /* Smooth transition for color */
 }
 

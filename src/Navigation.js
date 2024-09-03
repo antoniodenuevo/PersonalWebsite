@@ -10,12 +10,11 @@ const Navigation = () => {
         <Link to="/" className="site-title">Antonio De Nuevo</Link>
       </div>
       <div className="nav-center">
-        <Link to="/" className="nav-link">Projects</Link>
+        <Link to="/" className="nav-link">Works</Link>
         <Link to="/info" className="nav-link">About</Link>
       </div>
       <div className="nav-right">
-        <a href="mailto:antoniomdenuevo@gmail.com" className="nav-link">Mail</a>
-        <a href="https://instagram.com/antoniodenuevo" className="nav-link">Instagram</a>
+        <a href="mailto:antoniomdenuevo@gmail.com" className="nav-link">Contact</a>
       </div>
     </nav>
   );
