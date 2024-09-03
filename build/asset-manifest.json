@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.7e80709a.css",
+    "main.css": "/static/css/main.47f12f6a.css",
     "main.js": "/static/js/main.e667b02f.js",
     "static/js/453.195b869a.chunk.js": "/static/js/453.195b869a.chunk.js",
     "static/media/thepresidentialchoir01.jpg": "/static/media/thepresidentialchoir01.117d741b740d3a9cca97.jpg",
@@ -19,12 +19,12 @@
     "static/media/thepresidentialchoir03.jpg": "/static/media/thepresidentialchoir03.d5d849b59c19f7cf2af9.jpg",
     "static/media/landscapedetail3.jpg": "/static/media/landscapedetail3.866a5b037f25278e98de.jpg",
     "index.html": "/index.html",
-    "main.7e80709a.css.map": "/static/css/main.7e80709a.css.map",
+    "main.47f12f6a.css.map": "/static/css/main.47f12f6a.css.map",
     "main.e667b02f.js.map": "/static/js/main.e667b02f.js.map",
     "453.195b869a.chunk.js.map": "/static/js/453.195b869a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7e80709a.css",
+    "static/css/main.47f12f6a.css",
     "static/js/main.e667b02f.js"
   ]
 }
