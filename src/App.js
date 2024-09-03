@@ -18,8 +18,6 @@ const ScrollToTop = () => {
 const App = () => {
   return (
     <Router>
-      <ScrollToTop />
-      <Navigation />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/project/:id" element={<ProjectDetail />} />

@@ -7,15 +7,13 @@
       var currentLocation = window.location;
       var pathname = currentLocation.pathname;
 
+      // Redirect only if the pathname isn't `/` or `/index.html`
       if (pathname && pathname !== '/' && pathname !== '/index.html') {
-        var target = currentLocation.protocol + '//' + currentLocation.host + '/index.html?redirect=' + pathname + (currentLocation.search || '') + (currentLocation.hash || '');
-
+        var target = currentLocation.protocol + '//' + currentLocation.host + pathname;
         if (target !== currentLocation.href) {
           window.history.replaceState(null, null, target);
           window.location.replace(target);
         }
-      } else {
-        window.location.replace('/');
       }
     })();
   </script>
