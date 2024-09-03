@@ -4,12 +4,10 @@
   <meta charset="UTF-8">
   <script>
     (function() {
-      var currentLocation = window.location;
-      var pathname = currentLocation.pathname;
+      var pathname = window.location.pathname;
 
-      // Redirect if the current path is not the base URL or index.html
       if (pathname && pathname !== '/' && pathname !== '/index.html') {
-        window.location.replace('/');
+        window.location.replace('/?redirect=' + pathname);
       }
     })();
   </script>
